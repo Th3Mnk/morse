@@ -22,3 +22,4 @@ def results():
     morseMsg = request.form["input"]
     pants = morse(morseMsg)
     return render_template("results.html", morseMsg=morseMsg, pants=pants)
+
