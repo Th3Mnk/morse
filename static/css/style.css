@@ -1,0 +1,36 @@
+body{
+    background-image: url("https://cultofthepartyparrot.com/parrots/hd/slowparrot.gif");
+    background-size:cover;
+    background-color:white;
+    align-content: center;
+    text-align: center;
+}
+
+.jumbotron{
+    opacity:.6
+}
+
+.static {
+    position: absolute;
+    background: white;
+    width: 50%;
+    width: 50%;
+    text-align: center;
+}
+
+.static:hover {
+  opacity: 0;
+}
+
+.alphabet{
+    
+}
+
+.static {
+  position:absolute;
+  background: white;
+}
+
+.static:hover {
+  opacity:0;
+}
