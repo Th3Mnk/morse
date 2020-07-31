@@ -81,19 +81,15 @@ def morse(directions, morseMsg):
     }
 
     output = ""
-
-    #directions = input("Would you like to translate to morse or from morse? ")
-    #morseMsg = input("Please input the message you want to translate: ")
-
     if directions == "to":
         for i in morseMsg.upper():
             output += (to_morse[i] + " ")
             print(output)
     elif directions == "from":
-        for i in morseMsg.upper():
+        for i in morseMsg.upper().split(" "):
             output += (from_morse[i] + " ")
             print(output)
-#    else:
-#        directions = input("Input either 'to' or 'from'.")
+    else:
+        output = "Input either 'to' or 'from'."
 
     return output
