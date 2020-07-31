@@ -88,6 +88,8 @@ def morse(morseMsg):
             isMorse = False
     if isMorse == False:
         for i in morseMsg.upper():
+            if i not in to_morse:
+                return "Invalid Message"
             output += (to_morse[i] + " ")
             print(output)
     elif isMorse == True:
@@ -97,3 +99,4 @@ def morse(morseMsg):
     else:
         output = "Input either 'to' or 'from'."
     return output
+
