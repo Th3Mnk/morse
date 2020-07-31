@@ -19,7 +19,6 @@ def index():
 
 @app.route('/results', methods=['GET', 'POST'])
 def results():
-    morseMsg = request.form["Morse"]
-    directions = request.form["input"]
-    pants = morse(morseMsg, directions)
-    return render_template("results.html", directions=directions, morseMsg=morseMsg, pants=pants)
+    morseMsg = request.form["input"]
+    pants = morse(morseMsg)
+    return render_template("results.html", morseMsg=morseMsg, pants=pants)

@@ -1,4 +1,4 @@
-def morse(directions, morseMsg):
+def morse(morseMsg):
     to_morse = {
         "A": ".-",
         "B": "-...",
@@ -80,16 +80,20 @@ def morse(directions, morseMsg):
         '/': ' '
     }
 
+    morseCharacters = ["-", ".", "/", " "]
     output = ""
-    if directions == "to":
+    isMorse = True
+    for i in morseMsg:
+        if i not in morseCharacters:
+            isMorse = False
+    if isMorse == False:
         for i in morseMsg.upper():
             output += (to_morse[i] + " ")
             print(output)
-    elif directions == "from":
+    elif isMorse == True:
         for i in morseMsg.upper().split(" "):
             output += (from_morse[i] + " ")
             print(output)
     else:
         output = "Input either 'to' or 'from'."
-
     return output
